@@ -16,7 +16,7 @@ api = SentinelAPI('user', 'password', 'https://scihub.copernicus.eu/dhus')
 
 #directory: folder which contains a different folder for each cloud mask. This is a folder that already exists in the data downloaded from https://zenodo.org/record/1460961#.XvTC6JaxW8g
 
-directory = os.listdir('/.../SENTINEL_2_reference_cloud_masks_Baetens_Hagolle/Reference_dataset')
+directory = os.listdir('Reference_dataset')
 
 #Sorting the directory according to the names of the folders  
 directory2=sorted(directory)

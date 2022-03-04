@@ -6,7 +6,7 @@ import numpy as np
 # This file carries a database with spectra for cloud masking applications. It was created during the study described in https://doi.org/10.3390/rs8080666
 # It can be downloaded from https://git.gfz-potsdam.de/EnMAP/sentinel2_manual_classification_clouds
 
-f = h5.File("20170412_s2_manual_classification_data.h5", "r")
+f = h5.File("20160914_s2_manual_classification_data.h5", "r")
 
 # Get and print list of datasets within the H5 file
 datasetNames = [n for n in f.keys()]
@@ -39,4 +39,4 @@ classesData=np.expand_dims(classesData,1)
 Array_spectra_labels=np.concatenate((spectraData,classesData), axis=1)
 
 #Save the array with the spectra and the labels
-np.savetxt("2017_spectraSOMs.csv", Array_spectra_labels, delimiter=',', header=" #B1,  #B2,  #B3,  #B4, #B5, #B6, #B7, #B8, #B8a, #B9, #B10, #B11, #B12, #label",fmt='%10.4f')
+np.savetxt("2016_spectraSOMs.csv", Array_spectra_labels, delimiter=',', header=" #B1,  #B2,  #B3,  #B4, #B5, #B6, #B7, #B8, #B8a, #B9, #B10, #B11, #B12, #label",fmt='%10.4f')
